@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Products>  
+  <product>
+    <Id>1</Id>
+    <Name>Product A</Name>
+    <Description>This is the description of product A</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>12.75</Price>
+    <VATPercentage>10.5</VATPercentage>    
+  </product>
+  <product>
+    <Id>2</Id>
+    <Name>Product B</Name>
+    <Description>This is the description of product B</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>50.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>
+  <product>
+    <Id>3</Id>
+    <Name>Product C</Name>
+    <Description>This is the description of product C</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>20.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>
+  <product>
+    <Id>4</Id>
+    <Name>Product D</Name>
+    <Description>This is the description of product D</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>58.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>
+  <product>
+    <Id>5</Id>
+    <Name>Product E</Name>
+    <Description>This is the description of product E</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>50.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>  
+  <product>
+    <Id>6</Id>
+    <Name>Product F</Name>
+    <Description>This is the description of product F</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>4.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>
+  <product>
+    <Id>7</Id>
+    <Name>Product G</Name>
+    <Description>This is the description of product G</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>7.75</Price>
+    <VATPercentage>7.5</VATPercentage>
+  </product>
+  <product>
+    <Id>8</Id>
+    <Name>Product H</Name>
+    <Description>This is the description of product H</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>50.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>
+  <product>
+    <Id>9</Id>
+    <Name>Product I</Name>
+    <Description>This is the description of product I</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>20.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>
+  <product>
+    <Id>10</Id>
+    <Name>Product J</Name>
+    <Description>This is the description of product J</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>59.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>  
+  <product>
+    <Id>11</Id>
+    <Name>Product K</Name>
+    <Description>This is the description of product K</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>17.75</Price>
+    <VATPercentage>10.5</VATPercentage>
+  </product>
+  <product>
+    <Id>12</Id>
+    <Name>Product L</Name>
+    <Description>This is the description of product L</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>50.75</Price>
+    <VATPercentage>7.5</VATPercentage>
+  </product>
+  <product>
+    <Id>13</Id>
+    <Name>Product M</Name>
+    <Description>This is the description of product M</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>55.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>
+  <product>
+    <Id>14</Id>
+    <Name>Product N</Name>
+    <Description>This is the description of product N</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>50.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>
+  <product>
+    <Id>15</Id>
+    <Name>Product O</Name>
+    <Description>This is the description of product O</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>50.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>  
+  <product>
+    <Id>16</Id>
+    <Name>Product P</Name>
+    <Description>This is the description of product P</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>12.20</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>
+  <product>
+    <Id>17</Id>
+    <Name>Product Q</Name>
+    <Description>This is the description of product Q</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>50.75</Price>
+    <VATPercentage>10.5</VATPercentage>
+  </product>
+  <product>
+    <Id>18</Id>
+    <Name>Product R</Name>
+    <Description>This is the description of product R</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>45.75</Price>
+    <VATPercentage>7.5</VATPercentage>
+  </product>
+  <product>
+    <Id>19</Id>
+    <Name>Product R</Name>
+    <Description>This is the description of product S</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>50.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>
+  <product>
+    <Id>20</Id>
+    <Name>Product S</Name>
+    <Description>This is the description of product S</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>50.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>  
+  <product>
+    <Id>21</Id>
+    <Name>Product T</Name>
+    <Description>This is the description of product T</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>20.75</Price>
+    <VATPercentage>10.5</VATPercentage>
+  </product>
+  <product>
+    <Id>22</Id>
+    <Name>Product U</Name>
+    <Description>This is the description of product U</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>50.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>
+  <product>
+    <Id>23</Id>
+    <Name>Product V</Name>
+    <Description>This is the description of product V</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>50.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>
+  <product>
+    <Id>24</Id>
+    <Name>Product W</Name>
+    <Description>This is the description of product W</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>80.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>
+  <product>
+    <Id>25</Id>
+    <Name>Product X</Name>
+    <Description>This is the description of product X</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>150.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>  
+  <product>
+    <Id>26</Id>
+    <Name>Product Y</Name>
+    <Description>This is the description of product Y</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>5.75</Price>
+    <VATPercentage>10.5</VATPercentage>
+  </product>
+  <product>
+    <Id>27</Id>
+    <Name>Product Z</Name>
+    <Description>This is the description of product Z</Description>
+    <Picture>http://res.publicdomainfiles.com/pdf_view/59/13533978614286.png</Picture>
+    <Price>52.75</Price>
+    <VATPercentage>21.5</VATPercentage>
+  </product>
+</Products>
