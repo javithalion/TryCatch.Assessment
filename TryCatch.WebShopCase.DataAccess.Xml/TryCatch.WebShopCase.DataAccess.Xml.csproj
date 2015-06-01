@@ -39,8 +39,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Implementations\ProductRepository.cs" />
+    <Compile Include="Repository\Interfaces\IProductRepository.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\TryCatch.WebShopCase.Domain\TryCatch.WebShopCase.Domain.csproj">
+      <Project>{15282216-3db0-410c-808d-0737d6e430cf}</Project>
+      <Name>TryCatch.WebShopCase.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TryCatch.WebShopCase.Infraestructure\TryCatch.WebShopCase.DataAccess.Infraestructure.csproj">
+      <Project>{bb9e750b-f885-4acc-a0b9-7e08b0496fe5}</Project>
+      <Name>TryCatch.WebShopCase.DataAccess.Infraestructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
