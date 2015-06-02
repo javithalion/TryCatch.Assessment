@@ -1,0 +1,27 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">
+        <i class="fa icon-plus-sign-alt"></i>
+        <span>{{product.Name}}</span>
+    </h3>
+</div>
+
+<div class="modal-body">
+    <div class="panel  panel-primary">
+        <div class="panel-heading text-center">
+            <h4>{{product.Name}}</h4>
+        </div>
+        <div class="panel-body">
+            <div>
+                <img ng-src="{{product.PictureUrl}}" c class="img-responsive" />
+            </div>
+            <div>
+                <p>{{product.Description}}</p>
+            </div>
+            <div><strong>Price:</strong> {{product.Price}} €</div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-warning" ng-click="$dismiss()">Close</button>
+</div>

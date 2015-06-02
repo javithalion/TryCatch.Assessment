@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
@@ -43,8 +44,8 @@ namespace TryCatch.WebShopCase.DataAccess.Xml.Repository.Implementations
                             Name = pr.Element("Name").Value,
                             Description = pr.Element("Description").Value,
                             PictureUrl = pr.Element("Picture").Value,
-                            Price = Convert.ToDouble(pr.Element("Price").Value),
-                            VatPercentage = Convert.ToDouble(pr.Element("VATPercentage").Value)
+                            Price = Convert.ToDouble(pr.Element("Price").Value, CultureInfo.InvariantCulture),
+                            VatPercentage = Convert.ToDouble(pr.Element("VATPercentage").Value, CultureInfo.InvariantCulture)
                         }
                         ).AsQueryable();
                 }
@@ -70,8 +71,8 @@ namespace TryCatch.WebShopCase.DataAccess.Xml.Repository.Implementations
                             Name = pr.Element("Name").Value,
                             Description = pr.Element("Description").Value,
                             PictureUrl = pr.Element("Picture").Value,
-                            Price = Convert.ToDouble(pr.Element("Price").Value),
-                            VatPercentage = Convert.ToDouble(pr.Element("VATPercentage").Value)
+                            Price = Convert.ToDouble(pr.Element("Price").Value, CultureInfo.InvariantCulture),
+                            VatPercentage = Convert.ToDouble(pr.Element("VATPercentage").Value, CultureInfo.InvariantCulture)
                         }
                         ).AsQueryable().Where(query);
                 }
@@ -103,8 +104,8 @@ namespace TryCatch.WebShopCase.DataAccess.Xml.Repository.Implementations
                             Name = xmlProduct.Element("Name").Value,
                             Description = xmlProduct.Element("Description").Value,
                             PictureUrl = xmlProduct.Element("Picture").Value,
-                            Price = Convert.ToDouble(xmlProduct.Element("Price").Value),
-                            VatPercentage = Convert.ToDouble(xmlProduct.Element("VATPercentage").Value)
+                            Price = Convert.ToDouble(xmlProduct.Element("Price").Value, CultureInfo.InvariantCulture),
+                            VatPercentage = Convert.ToDouble(xmlProduct.Element("VATPercentage").Value, CultureInfo.InvariantCulture)
                         };
                     }
                     return result;

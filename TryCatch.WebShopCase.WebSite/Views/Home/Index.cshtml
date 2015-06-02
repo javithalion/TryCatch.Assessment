@@ -3,22 +3,116 @@
 }
 
 <div ng-controller="shopCatalogController">
-       
-    <div class="pull-right">
-        <i class="fa fa-shopping-cart"></i> Shopping Cart&nbsp; <b>({{productsAddedToCart.length}}) </b>
-    </div>
-    <!-- Example row of columns -->
-    <div class="row">
-        <div class="col-md-4" ng-repeat="element in products">
-            <h2>Name: {{element.Name}}</h2>
-            <p>Description: {{element.Description}}</p>
-            <p>Price: {{element.Price}}</p>
-            <p><a class="btn btn-default" ng-click="addToCart(element)" role="button">Add to cart &raquo;</a></p>
+
+    <div class="row row-offcanvas row-offcanvas-right">
+        <!-- Products grid -->
+        <div class="col-xs-12 col-sm-9">
+            <div class="row">
+                <div class="col-md-4" ng-repeat="element in products">
+                    <div class="panel  panel-primary">
+                        <div class="panel-heading text-center">
+                            <h4>{{element.Name}}</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div>
+                                <img ng-src="{{element.PictureUrl}}" c class="img-responsive" />
+                            </div>
+                            <div>
+                                <p>{{element.Description}}</p>
+                            </div>
+                            <div><strong>Price:</strong> {{element.Price}} €</div>
+                        </div>
+                        <div class="panel-footer text-center">
+                            <a class="btn btn-info" ng-click="showProductDetailsPopUp(element)" role="button">Details</a>
+                            <a class="btn btn-success" ng-click="addToCart(element)" role="button">Add to cart &raquo;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Grid pagination -->
+            <div class="row pull-right">
+                <pagination ng-model="pagingInfo.page"
+                            total-items="pagingInfo.totalItems"
+                            items-per-page="pagingInfo.itemsPerPage"
+                            ng-change="pageChanged()"
+                            max-size=" 10"></pagination>
+            </div>
         </div>
+
+        <!-- Shoping cart -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+            <div class="pull-right">
+                <div class="panel  panel-info">
+                    <div class="panel-heading text-center">
+                        <i class="fa fa-shopping-cart"></i> <h5>Shopping Cart</h5>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                Products: <b>({{productsAddedToCart.length}}) </b>
+                            </div>
+                            <div class="col-md-6">
+                                Sub total: {{getCartSubtotal()}} €
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer text-center">
+
+                        <p> @Html.ActionLink("Details", "Index", "Cart", null, new { @class = "btn btn-primary" })</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Pop up (angulasJS modal) for product details-->
+        <script type="text/ng-template" id="ProductDetailsPopUp">
+            <div class="modal-header">
+                <h3 class="modal-title">
+                    <i class="fa icon-plus-sign-alt"></i>
+                    <span>{{selectedProductForDetails.Name}}</span>
+                </h3>
+            </div>
+            <div class="modal-body">
+                <div class="panel  panel-primary">
+                    <div class="panel-heading text-center">
+                        <h4>{{selectedProductForDetails.Name}}</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div>
+                            <img ng-src="{{selectedProductForDetails.PictureUrl}}" c class="img-responsive" />
+                        </div>
+                        <div>
+                            <p>{{selectedProductForDetails.Description}}</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <strong>Price:</strong> {{selectedProductForDetails.Price}} €
+                            </div>
+                            <div class="col-md-4">
+                                <strong>VAT:</strong> {{selectedProductForDetails.VatPercentage}} %
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Total:</strong> {{getFinalPrice(selectedProductForDetails)}} €
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" ng-click="addToCart(selectedProductForDetails); $dismiss();">Add to cart &raquo;</button>
+                <button class="btn btn-info" ng-click="$dismiss()">Close</button>
+            </div>
+        </script>
+
+
     </div>
     <hr>
 </div>
 @section scripts
 {
     @Scripts.Render("~/bundles/indexScripts")
+
+
 }

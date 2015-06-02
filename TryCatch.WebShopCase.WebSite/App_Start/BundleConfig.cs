@@ -26,7 +26,8 @@ namespace TryCatch.WebShopCase.WebSite
             bundles.Add(new ScriptBundle("~/bundles/indexScripts").Include(
                 "~/Scripts/Angular/services/order.ang.service.js",
                 "~/Scripts/Angular/services/product.ang.service.js",
-                "~/Scripts/Angular/controllers/shop.ang.controller.js"
+                "~/Scripts/Angular/controllers/shop.ang.controller.js",
+                "~/Scripts/ui-bootstrap-tpls-0.13.0.js"
                          ));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're

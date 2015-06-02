@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,13 +21,20 @@ namespace TryCatch.WebShopCase.WebApi.Controllers
         }
 
         // GET api/products
-        public string Get()
+        public string Get(int page = 1, int itemsPerPage = 10)
         {
             try
             {
-                var products = _productService.FindAll();
+                var products = _productService.FindAll(); 
                 var serializer = new Newtonsoft.Json.JsonSerializer();
-                return JsonConvert.SerializeObject(products);
+                var json = JObject.FromObject(
+                    new
+                    {
+                        count = products.Count(),
+                        data = JsonConvert.SerializeObject(products.Skip((page - 1) * itemsPerPage).Take(itemsPerPage)) //TODO :: Move pagination to repository 
+                    });
+
+                return json.ToString();
             }
             catch (Exception ex)
             {
