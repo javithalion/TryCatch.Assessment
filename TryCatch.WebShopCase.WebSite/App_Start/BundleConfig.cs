@@ -45,7 +45,8 @@ namespace TryCatch.WebShopCase.WebSite
             bundles.Add(new StyleBundle("~/Content/mainThemeCss").Include(
                         "~/Content/bootstrap.css",
                         "~/Content/bootstrap-theme.css",
-                        "~/Content/themes/custom/Custom.css"
+                        "~/Content/themes/custom/Custom.css",
+                        "~/Content/font-awesome.css"
                         ));
         }
     }

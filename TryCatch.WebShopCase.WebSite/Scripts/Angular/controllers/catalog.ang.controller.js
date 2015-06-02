@@ -74,8 +74,12 @@
             return subTotal;
         };
 
-        $scope.getCartNumberOfDifferentProducts = function () {
-            return $sessionStorage.productsAddedToCart.length
+        $scope.getCartNumberOfProducts = function () {            
+            var total = 0;
+            $.each($sessionStorage.productsAddedToCart, function (index) {
+                total += $sessionStorage.productsAddedToCart[index].amount;
+            });
+            return total;
         }
 
         //Initial load

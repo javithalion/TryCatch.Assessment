@@ -16,6 +16,7 @@
                 <th>Sub total</th>
                 <th>VAT (%)</th>
                 <th>Total</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -34,6 +35,13 @@
                 <td>{{orderLine.product.Price}} </td>
                 <td>{{orderLine.product.VatPercentage}} </td>
                 <td>{{getTotalForOrderLine(orderLine)}} </td>
+                <td>
+                    <a class="btn btn-default btn-xs"
+                       ng-click="deleteOrderLine(orderLine)"
+                       tooltip="Delete approver from list">
+                        <i class="fa fa-trash"></i>
+                    </a>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -70,10 +78,20 @@
         </div>
         <div class="panel-footer text-center">
             @Html.ActionLink("Back to catalog", "Index", "Home", null, new { @class = "btn btn-success" })
-            <input class="btn btn-primary" type="submit" value="Check out">
+            @Html.ActionLink("Check out", "Checkout", "Cart", null, new { @class = "btn btn-primary" })
         </div>
     </div>
 
+    <!-- Pop up (angulasJS modal) for delete confirmation-->
+    <script type="text/ng-template" id="DeleteOrderLineConfirmation">
+        <div class="modal-header">
+            <h4 class="modal-title">Are you sure to remove this order line from the order?</h4>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="$close()">Yes</button>
+            <button class="btn btn-warning" ng-click="$dismiss()">Cancel</button>
+        </div>
+    </script>
 
 </div>
 

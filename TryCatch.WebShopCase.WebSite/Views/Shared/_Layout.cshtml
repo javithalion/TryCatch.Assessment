@@ -8,6 +8,9 @@
 
     @Styles.Render("~/Content/mainThemeCss")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrapJs")
+    @Scripts.Render("~/bundles/angularJs")
 </head>
 <body>
 
@@ -52,13 +55,10 @@
 
         @RenderBody()
 
-        <footer>
-            <p>&copy; @DateTime.Now.Year -Javier Cervera Cano Shop demo</p>
+        <footer class="text-center">
+            <p>&copy; @DateTime.Now.Year - Javier Cervera Cano Shop demo</p>
         </footer>
-    </div> <!-- /container -->
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrapJs")
-    @Scripts.Render("~/bundles/angularJs")
+    </div> <!-- /container -->    
     @Scripts.Render("~/bundles/mainAngularApp")
     @RenderSection("scripts", required: false)
 </body>

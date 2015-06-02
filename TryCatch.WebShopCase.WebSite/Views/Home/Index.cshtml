@@ -40,20 +40,18 @@
         </div>
 
         <!-- Shoping cart -->
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+        <div class="col-xs-12 col-sm-3 sidebar-offcanvas" id="sidebar">
             <div class="pull-right">
                 <div class="panel  panel-info">
                     <div class="panel-heading text-center">
                         <i class="fa fa-shopping-cart"></i> <h5>Shopping Cart</h5>
                     </div>
                     <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                Products: <b>({{getCartNumberOfDifferentProducts()}}) </b>
-                            </div>
-                            <div class="col-md-6">
-                                Sub total: {{getCartSubtotal()}} €
-                            </div>
+                        <div class="col-xs-6">
+                            Products: <b>({{getCartNumberOfProducts()}}) </b>
+                        </div>
+                        <div class="col-xs-6">
+                            Sub total: {{getCartSubtotal()}} €
                         </div>
                     </div>
                     <div class="panel-footer text-center">
