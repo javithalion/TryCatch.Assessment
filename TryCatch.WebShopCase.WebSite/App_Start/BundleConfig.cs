@@ -20,13 +20,20 @@ namespace TryCatch.WebShopCase.WebSite
                         "~/Scripts/angular-sanitize.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/mainAngularApp").Include(
-                        "~/Scripts/Angular/app.main.js"
+                        "~/Scripts/Angular/app.main.js",
+                       "~/Scripts/Angular/plugins/ngStorage.js"
                         ));
 
-            bundles.Add(new ScriptBundle("~/bundles/indexScripts").Include(
-                "~/Scripts/Angular/services/order.ang.service.js",
+            bundles.Add(new ScriptBundle("~/bundles/catalogScripts").Include(
                 "~/Scripts/Angular/services/product.ang.service.js",
-                "~/Scripts/Angular/controllers/shop.ang.controller.js",
+                "~/Scripts/Angular/controllers/catalog.ang.controller.js",               
+                "~/Scripts/ui-bootstrap-tpls-0.13.0.js"
+                         ));
+
+            bundles.Add(new ScriptBundle("~/bundles/cartScripts").Include(
+                "~/Scripts/Angular/services/cart.ang.service.js",
+                "~/Scripts/Angular/services/product.ang.service.js",
+                "~/Scripts/Angular/controllers/cart.ang.controller.js",                
                 "~/Scripts/ui-bootstrap-tpls-0.13.0.js"
                          ));
 

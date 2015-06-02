@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Cart details";
+    Layout = "~/Views/Shared/_LayoutNoJumb.cshtml";
+}
+
+
+<div class="row table-responsive" ng-controller="cartController">
+    @*@Html.BeginForm("checkout", "Cart")
+        @Html.AntiForgeryToken();
+        @Html.Hidden("hdnOrderLines")*@
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Amount</th>
+                <th>Sub total</th>
+                <th>VAT (%)</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-show="!currentOrderLines || currentOrderLines.length == 0">
+                <td>
+                    <strong>Empty cart !</strong>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr ng-repeat="orderLine in currentOrderLines">
+                <td>{{orderLine.product.Name}} </td>
+                <td><input type="number" ng-model="orderLine.amount"></td>
+                <td>{{orderLine.product.Price}} </td>
+                <td>{{orderLine.product.VatPercentage}} </td>
+                <td>{{getTotalForOrderLine(orderLine)}} </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="panel  panel-info pull-right">
+        <div class="panel-heading text-center">
+            <i class="fa fa-shopping-cart"></i> <h5>Summary</h5>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <strong>Sub total: </strong>
+                </div>
+                <div class="col-md-6">
+                    {{getSubTotalForOrder()}} €
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <strong>VAT total: </strong>
+                </div>
+                <div class="col-md-6">
+                    {{getVatForOrder()}} €
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <strong>Total: </strong>
+                </div>
+                <div class="col-md-6">
+                    <strong>{{getTotalForOrder()}} €</strong>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer text-center">
+            @Html.ActionLink("Back to catalog", "Index", "Home", null, new { @class = "btn btn-success" })
+            <input class="btn btn-primary" type="submit" value="Check out">
+        </div>
+    </div>
+
+
+</div>
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/cartScripts")
+}
+

@@ -6,14 +6,12 @@
     app.requires.push('ui.bootstrap');
 
     //shopCatalogController
-    app.controller('shopCatalogController', ['$scope', '$http', '$modal', 'productService',
-    function ($scope, $http, $modal, productService) {
+    app.controller('shopCatalogController', ['$scope', '$http', '$modal', 'productService', '$localStorage', '$sessionStorage',
+    function ($scope, $http, $modal, productService, $localStorage, $sessionStorage) {
 
         //--------------------------Variables
         $scope.products = null;
-        $scope.productsAddedToCart = [];
         $scope.errorMessage = null;
-
         $scope.itemsPerPage = 10;
         $scope.pagingInfo = {
             page: 1,
@@ -38,21 +36,19 @@
         };
 
         $scope.addToCart = function (product) {
-
             //check if is a new entry or a product already added
             var found = false;
-            for (var i = 0; i < $scope.productsAddedToCart.length; i++) {
+            for (var i = 0; i < $sessionStorage.productsAddedToCart.length; i++) {
 
-                if ($scope.productsAddedToCart[i].product.Id == product.Id) {
-                    $scope.productsAddedToCart[i].amount++;
+                if ($sessionStorage.productsAddedToCart[i].product.Id == product.Id) {
+                    $sessionStorage.productsAddedToCart[i].amount++;
                     found = true;
                 }
             }
-
             //if this product was not found add it
             if (!found) {
-                $scope.productsAddedToCart.push({ "amount": 1, "product": product });
-            }            
+                $sessionStorage.productsAddedToCart.push({ "amount": 1, "product": product });
+            }
         };
 
         $scope.getFinalPrice = function (product) {
@@ -62,24 +58,32 @@
 
         $scope.showProductDetailsPopUp = function (element) {
 
-            $scope.selectedProductForDetails = element;            
+            $scope.selectedProductForDetails = element;
             var modalInstance = $modal.open({
                 templateUrl: 'ProductDetailsPopUp',
                 size: 'lg',
-                scope: $scope                
+                scope: $scope
             });
         }
 
         $scope.getCartSubtotal = function () {
             var subTotal = 0;
-            $.each($scope.productsAddedToCart, function (index) {
-                subTotal += ($scope.productsAddedToCart[index].amount * $scope.productsAddedToCart[index].product.Price);
+            $.each($sessionStorage.productsAddedToCart, function (index) {
+                subTotal += ($sessionStorage.productsAddedToCart[index].amount * $sessionStorage.productsAddedToCart[index].product.Price);
             });
             return subTotal;
         };
 
+        $scope.getCartNumberOfDifferentProducts = function () {
+            return $sessionStorage.productsAddedToCart.length
+        }
+
         //Initial load
         $scope.init = function () {
+            if (!$sessionStorage.productsAddedToCart)
+            {
+                $sessionStorage.productsAddedToCart = []
+            }
             //Initial product load           
             $scope.refreshProductList();
         };
