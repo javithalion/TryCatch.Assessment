@@ -45,7 +45,7 @@ namespace TryCatch.WebShopCase.WebSite.Services.Implementations
                     response.StatusCode != System.Net.HttpStatusCode.Created &&
                     response.StatusCode != System.Net.HttpStatusCode.NoContent)
                 {
-                    throw new Exception(string.Format("Request to API system failed. Status code = {0} ErrorMessage = {1}", response.StatusCode, response.ErrorMessage));
+                    throw new Exception(string.Format(Resources.Resources.Errors_Checkout_WebapiFail, response.StatusCode, response.ErrorMessage));
                 }
                 else
                 {
@@ -55,7 +55,7 @@ namespace TryCatch.WebShopCase.WebSite.Services.Implementations
             }
             catch (Exception ex)
             {
-                throw new Exception("There was a problem confirming the check out with system. Please try again.", ex);
+                throw new Exception(Resources.Resources.Errors_Checkout_General, ex);
             }
         }
     }

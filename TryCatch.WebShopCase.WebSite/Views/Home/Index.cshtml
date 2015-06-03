@@ -5,9 +5,10 @@
 <div ng-controller="shopCatalogController">
 
     <div class="row row-offcanvas row-offcanvas-right">
-        <!-- Products grid -->
         <div class="col-xs-12 col-sm-9">
+            <!-- Products grid -->
             <div class="row">
+
                 <div class="col-md-4" ng-repeat="element in products">
                     <div class="panel  panel-primary">
                         <div class="panel-heading text-center">
@@ -20,7 +21,7 @@
                             <div>
                                 <p>{{element.Description}}</p>
                             </div>
-                            <div><strong>Price:</strong> {{element.Price}} €</div>
+                            <div><strong>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Price  :</strong> {{element.Price}} €</div>
                         </div>
                         <div class="panel-footer text-center">
                             <a class="btn btn-info" ng-click="showProductDetailsPopUp(element)" role="button">Details</a>
@@ -44,19 +45,32 @@
             <div class="pull-right">
                 <div class="panel  panel-info">
                     <div class="panel-heading text-center">
-                        <i class="fa fa-shopping-cart"></i> <h5>Shopping Cart</h5>
+
+                        <h5><i class="glyphicon glyphicon-shopping-cart"></i> @TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_ShoppingCart</h5>
                     </div>
-                    <div class="panel-body">
-                        <div class="col-xs-6">
-                            Products: <b>({{getCartNumberOfProducts()}}) </b>
-                        </div>
-                        <div class="col-xs-6">
-                            Sub total: {{getCartSubtotal()}} €
-                        </div>
+                    <div class="panel-body text-center">
+                        
+                            <div class="col-xs-12">
+                                <p>
+                                    @TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Products:
+
+                                    <b>({{getCartNumberOfProducts()}}) </b>
+                                </p>
+                            </div>
+                        
+                        
+                            <div class="col-xs-12">
+                                <p>
+                                    @TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_SubTotal:
+
+                                    {{getCartSubtotal()}} €
+                                </p>
+                            </div>
+                        
                     </div>
                     <div class="panel-footer text-center">
 
-                        <p> @Html.ActionLink("Details", "Index", "Cart", null, new { @class = "btn btn-primary" })</p>
+                        <p> @Html.ActionLink(TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Details, "Index", "Cart", null, new { @class = "btn btn-primary" })</p>
                     </div>
                 </div>
             </div>
@@ -66,7 +80,7 @@
         <script type="text/ng-template" id="ProductDetailsPopUp">
             <div class="modal-header">
                 <h3 class="modal-title">
-                    <i class="fa icon-plus-sign-alt"></i>
+                    <i class="glyphicon glyphicon-share"></i>
                     <span>{{selectedProductForDetails.Name}}</span>
                 </h3>
             </div>
@@ -84,21 +98,21 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <strong>Price:</strong> {{selectedProductForDetails.Price}} €
+                                <strong>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Price:</strong> {{selectedProductForDetails.Price}} €
                             </div>
                             <div class="col-md-4">
-                                <strong>VAT:</strong> {{selectedProductForDetails.VatPercentage}} %
+                                <strong>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Vat:</strong> {{selectedProductForDetails.VatPercentage}} %
                             </div>
                             <div class="col-md-4">
-                                <strong>Total:</strong> {{getFinalPrice(selectedProductForDetails)}} €
+                                <strong>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Total:</strong> {{getFinalPrice(selectedProductForDetails)}} €
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-success" ng-click="addToCart(selectedProductForDetails); $dismiss();">Add to cart &raquo;</button>
-                <button class="btn btn-info" ng-click="$dismiss()">Close</button>
+                <button class="btn btn-success" ng-click="addToCart(selectedProductForDetails); $dismiss();">@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_AddToCart &raquo;</button>
+                <button class="btn btn-info" ng-click="$dismiss()">@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Close</button>
             </div>
         </script>
 

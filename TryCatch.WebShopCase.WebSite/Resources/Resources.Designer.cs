@@ -61,11 +61,263 @@ namespace TryCatch.WebShopCase.WebSite.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure to remove this order line from the order?.
+        /// </summary>
+        public static string Display_CartView_DeleteConfirmation {
+            get {
+                return ResourceManager.GetString("Display_CartView_DeleteConfirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Well done!! Your cart is now empty.
+        /// </summary>
+        public static string Display_ConfirmationView_ConfirmationMessage {
+            get {
+                return ResourceManager.GetString("Display_ConfirmationView_ConfirmationMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Addresssssss.
         /// </summary>
         public static string Display_Customer_Address {
             get {
                 return ResourceManager.GetString("Display_Customer_Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City.
+        /// </summary>
+        public static string Display_Customer_City {
+            get {
+                return ResourceManager.GetString("Display_Customer_City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        public static string Display_Customer_Email {
+            get {
+                return ResourceManager.GetString("Display_Customer_Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First name.
+        /// </summary>
+        public static string Display_Customer_FirstName {
+            get {
+                return ResourceManager.GetString("Display_Customer_FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to House number.
+        /// </summary>
+        public static string Display_Customer_HouseNumber {
+            get {
+                return ResourceManager.GetString("Display_Customer_HouseNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last name.
+        /// </summary>
+        public static string Display_Customer_LastName {
+            get {
+                return ResourceManager.GetString("Display_Customer_LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        public static string Display_Customer_Title {
+            get {
+                return ResourceManager.GetString("Display_Customer_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zip code.
+        /// </summary>
+        public static string Display_Customer_ZipCode {
+            get {
+                return ResourceManager.GetString("Display_Customer_ZipCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Actions.
+        /// </summary>
+        public static string Display_GeneralView_Actions {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_Actions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add to cart.
+        /// </summary>
+        public static string Display_GeneralView_AddToCart {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_AddToCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount.
+        /// </summary>
+        public static string Display_GeneralView_Amount {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_Amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        public static string Display_GeneralView_Close {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string Display_GeneralView_Details {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Empty cart !.
+        /// </summary>
+        public static string Display_GeneralView_EmptyCart {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_EmptyCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        public static string Display_GeneralView_No {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_No", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string Display_GeneralView_Price {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product.
+        /// </summary>
+        public static string Display_GeneralView_Product {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_Product", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Products.
+        /// </summary>
+        public static string Display_GeneralView_Products {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_Products", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shopping cart.
+        /// </summary>
+        public static string Display_GeneralView_ShoppingCart {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_ShoppingCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sub total.
+        /// </summary>
+        public static string Display_GeneralView_SubTotal {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_SubTotal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total.
+        /// </summary>
+        public static string Display_GeneralView_Total {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_Total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VAT (%).
+        /// </summary>
+        public static string Display_GeneralView_Vat {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_Vat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        public static string Display_GeneralView_Yes {
+            get {
+                return ResourceManager.GetString("Display_GeneralView_Yes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There was an error during the checkout process. {0}.
+        /// </summary>
+        public static string Errors_Cart_CheckoutProblem {
+            get {
+                return ResourceManager.GetString("Errors_Cart_CheckoutProblem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provided checkout information was not valid.
+        /// </summary>
+        public static string Errors_Cart_InvalidInformation {
+            get {
+                return ResourceManager.GetString("Errors_Cart_InvalidInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There was a problem confirming the check out with system. Please try again..
+        /// </summary>
+        public static string Errors_Checkout_General {
+            get {
+                return ResourceManager.GetString("Errors_Checkout_General", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Request to API system failed. Status code = {0} ErrorMessage = {1}.
+        /// </summary>
+        public static string Errors_Checkout_WebapiFail {
+            get {
+                return ResourceManager.GetString("Errors_Checkout_WebapiFail", resourceCulture);
             }
         }
     }

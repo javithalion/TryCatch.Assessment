@@ -25,7 +25,7 @@ namespace TryCatch.WebShopCase.WebSite.Models
 
         [Required]
         [StringLength(30)]
-        [Display(Name = "Display_CustomerFirstName", ResourceType = typeof(WebSite.Resources.Resources))]
+        [Display(Name = "Display_Customer_FirstName", ResourceType = typeof(WebSite.Resources.Resources))]
         public string FirstName { get; set; }
 
         [Required]

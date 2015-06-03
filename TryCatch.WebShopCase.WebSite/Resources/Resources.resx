@@ -117,7 +117,91 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Display_CartView_DeleteConfirmation" xml:space="preserve">
+    <value>Are you sure to remove this order line from the order?</value>
+  </data>
+  <data name="Display_ConfirmationView_ConfirmationMessage" xml:space="preserve">
+    <value>Well done!! Your cart is now empty</value>
+  </data>
   <data name="Display_Customer_Address" xml:space="preserve">
     <value>Addresssssss</value>
+  </data>
+  <data name="Display_Customer_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Display_Customer_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Display_Customer_FirstName" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="Display_Customer_HouseNumber" xml:space="preserve">
+    <value>House number</value>
+  </data>
+  <data name="Display_Customer_LastName" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="Display_Customer_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Display_Customer_ZipCode" xml:space="preserve">
+    <value>Zip code</value>
+  </data>
+  <data name="Display_GeneralView_Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Display_GeneralView_AddToCart" xml:space="preserve">
+    <value>Add to cart</value>
+  </data>
+  <data name="Display_GeneralView_Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="Display_GeneralView_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Display_GeneralView_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Display_GeneralView_EmptyCart" xml:space="preserve">
+    <value>Empty cart !</value>
+  </data>
+  <data name="Display_GeneralView_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Display_GeneralView_Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Display_GeneralView_Product" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="Display_GeneralView_Products" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="Display_GeneralView_ShoppingCart" xml:space="preserve">
+    <value>Shopping cart</value>
+  </data>
+  <data name="Display_GeneralView_SubTotal" xml:space="preserve">
+    <value>Sub total</value>
+  </data>
+  <data name="Display_GeneralView_Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Display_GeneralView_Vat" xml:space="preserve">
+    <value>VAT (%)</value>
+  </data>
+  <data name="Display_GeneralView_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Errors_Cart_CheckoutProblem" xml:space="preserve">
+    <value>There was an error during the checkout process. {0}</value>
+  </data>
+  <data name="Errors_Cart_InvalidInformation" xml:space="preserve">
+    <value>Provided checkout information was not valid</value>
+  </data>
+  <data name="Errors_Checkout_General" xml:space="preserve">
+    <value>There was a problem confirming the check out with system. Please try again.</value>
+  </data>
+  <data name="Errors_Checkout_WebapiFail" xml:space="preserve">
+    <value>Request to API system failed. Status code = {0} ErrorMessage = {1}</value>
   </data>
 </root>

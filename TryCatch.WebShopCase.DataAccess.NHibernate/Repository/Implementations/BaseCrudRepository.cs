@@ -59,6 +59,7 @@ namespace TryCatch.WebShopCase.DataAccess.NHibernate.Repository.Implementations
             try
             {
                 _session.Save(entity);
+                _session.Flush();
                 return entity;
             }
             catch (Exception ex)
@@ -71,7 +72,8 @@ namespace TryCatch.WebShopCase.DataAccess.NHibernate.Repository.Implementations
         {
             try
             {
-                _session.Update(entity);                
+                _session.Update(entity);
+                _session.Flush();
             }
             catch (Exception ex)
             {
@@ -84,6 +86,7 @@ namespace TryCatch.WebShopCase.DataAccess.NHibernate.Repository.Implementations
             try
             {
                 _session.Delete(entity);
+                _session.Flush();
             }
             catch (Exception ex)
             {

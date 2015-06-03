@@ -39,7 +39,7 @@ namespace TryCatch.WebShopCase.WebSite.Controllers
             try
             {
                 if (!ModelState.IsValid)
-                    throw new HttpException("Provided checkout information was not valid");
+                    throw new HttpException(Resources.Resources.Errors_Cart_InvalidInformation);
 
                 var orderIdentifier = _checkoutConfirmationService.CheckOutAction(model);
 
@@ -48,7 +48,7 @@ namespace TryCatch.WebShopCase.WebSite.Controllers
             }
             catch (Exception ex)
             {
-                ViewData[MessageType.Error.ToString()] = string.Format("There was an error during the checkout process. {0} ", ex.Message);
+                ViewData[MessageType.Error.ToString()] = string.Format(Resources.Resources.Errors_Cart_CheckoutProblem, ex.Message);
                 return View();
             }
         }

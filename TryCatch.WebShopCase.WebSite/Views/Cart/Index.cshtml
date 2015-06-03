@@ -11,18 +11,18 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Product</th>
-                <th>Amount</th>
-                <th>Sub total</th>
-                <th>VAT (%)</th>
-                <th>Total</th>
-                <th>Actions</th>
+                <th>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Product</th>
+                <th>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Amount</th>
+                <th>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_SubTotal</th>
+                <th>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Vat</th>
+                <th>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Total</th>
+                <th>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Actions</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-show="!currentOrderLines || currentOrderLines.length == 0">
                 <td>
-                    <strong>Empty cart !</strong>
+                    <strong>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_EmptyCart</strong>
                 </td>
                 <td></td>
                 <td></td>
@@ -38,8 +38,8 @@
                 <td>
                     <a class="btn btn-default btn-xs"
                        ng-click="deleteOrderLine(orderLine)"
-                       tooltip="Delete approver from list">
-                        <i class="fa fa-trash"></i>
+                       tooltip="Delete order line">
+                        <i class=" icon-remove-sign"></i>
                     </a>
                 </td>
             </tr>
@@ -53,7 +53,7 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-6">
-                    <strong>Sub total: </strong>
+                    <strong>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_SubTotal:</strong>
                 </div>
                 <div class="col-md-6">
                     {{getSubTotalForOrder()}} €
@@ -61,7 +61,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <strong>VAT total: </strong>
+                    <strong>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Vat: </strong>
                 </div>
                 <div class="col-md-6">
                     {{getVatForOrder()}} €
@@ -69,7 +69,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <strong>Total: </strong>
+                    <strong>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Total: </strong>
                 </div>
                 <div class="col-md-6">
                     <strong>{{getTotalForOrder()}} €</strong>
@@ -85,11 +85,11 @@
     <!-- Pop up (angulasJS modal) for delete confirmation-->
     <script type="text/ng-template" id="DeleteOrderLineConfirmation">
         <div class="modal-header">
-            <h4 class="modal-title">Are you sure to remove this order line from the order?</h4>
+            <h4 class="modal-title">@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_CartView_DeleteConfirmation</h4>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-primary" ng-click="$close()">Yes</button>
-            <button class="btn btn-warning" ng-click="$dismiss()">Cancel</button>
+            <button class="btn btn-primary" ng-click="$close()">@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Yes</button>
+            <button class="btn btn-warning" ng-click="$dismiss()">@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_No</button>
         </div>
     </script>
 

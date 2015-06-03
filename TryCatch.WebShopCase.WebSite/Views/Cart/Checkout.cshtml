@@ -85,7 +85,7 @@
 
                 <div class="form-group pull-right">
                     @Html.ActionLink("Back to Cart", "Index", null, new { @class = "btn btn-warning" })
-                    <input type="submit" class="btn btn-primary value=" save" />
+                    <input type="submit" class="btn btn-primary value="Save" />
                 </div>
             </div>
 
@@ -97,17 +97,17 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Product</th>
-                        <th>Amount</th>
-                        <th>Sub total</th>
-                        <th>VAT (%)</th>
-                        <th>Total</th>
+                        <th>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Product</th>
+                        <th>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Amount</th>
+                        <th>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_SubTotal</th>
+                        <th>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Vat</th>
+                        <th>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Total</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-show="!currentOrderLines || currentOrderLines.length == 0">
                         <td>
-                            <strong>Empty cart !</strong>
+                            <strong>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_EmptyCart</strong>
                         </td>
                         <td></td>
                         <td></td>
@@ -127,14 +127,14 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="panel  panel-info pull-right">
+            <div class="panel  panel-info pull-right ">
                 <div class="panel-heading text-center">
                     <i class="fa fa-shopping-cart"></i> <h5>Summary</h5>
                 </div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <strong>Sub total: </strong>
+                            <strong>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_SubTotal: </strong>
                         </div>
                         <div class="col-md-6">
                             {{getSubTotalForOrder()}} €
@@ -142,7 +142,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <strong>VAT total: </strong>
+                            <strong>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Vat: </strong>
                         </div>
                         <div class="col-md-6">
                             {{getVatForOrder()}} €
@@ -150,7 +150,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <strong>Total: </strong>
+                            <strong>@TryCatch.WebShopCase.WebSite.Resources.Resources.Display_GeneralView_Total: </strong>
                         </div>
                         <div class="col-md-6">
                             <strong>{{getTotalForOrder()}} €</strong>
