@@ -79,7 +79,7 @@ namespace TryCatch.WebShopCase.WebSite.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Addresssssss.
+        ///   Looks up a localized string similar to Addres.
         /// </summary>
         public static string Display_Customer_Address {
             get {
