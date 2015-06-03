@@ -12,42 +12,42 @@ namespace TryCatch.WebShopCase.Domain
         /// <summary>
         /// Gets or sets the title for this customer
         /// </summary>
-        public string Title { get; set; }
+        public virtual string Title { get; set; }
 
         /// <summary>
         /// Gets or sets the first name for this customer
         /// </summary>
-        public string FirstName { get; set; }
+        public virtual string FirstName { get; set; }
 
         /// <summary>
         /// Gets or sets the last name for this customer
         /// </summary>
-        public string LastName { get; set; }
+        public virtual string LastName { get; set; }
 
         /// <summary>
         /// Gets or sets the address for this customer
         /// </summary>
-        public string Address { get; set; }
+        public virtual string Address { get; set; }
 
         /// <summary>
         /// Gets or sets the email for this customer
         /// </summary>
-        public string Email { get; set; }
+        public virtual string Email { get; set; }
 
          /// <summary>
         /// Gets or sets the house number for this customer
         /// </summary>
-        public int HouseNumber { get; set; }
+        public virtual int HouseNumber { get; set; }
 
          /// <summary>
         /// Gets or sets the zip code for this customer
         /// </summary>
-        public string ZipCode { get; set; }
+        public virtual string ZipCode { get; set; }
 
          /// <summary>
         /// Gets or sets the city for this customer
         /// </summary>
-        public string City { get; set; }
+        public virtual string City { get; set; }
 
         /// <summary>
         /// Gets the desciption for this customer. First name and last name string

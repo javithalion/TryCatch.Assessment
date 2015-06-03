@@ -21,7 +21,7 @@ namespace TryCatch.WebShopCase.WebApi.Controllers
         }
 
         // GET api/products
-        public string Get(int page = 1, int itemsPerPage = 10)
+        public string Get(int page = 1, int itemsPerPage = 10, bool allProducts = false)
         {
             try
             {
@@ -31,7 +31,9 @@ namespace TryCatch.WebShopCase.WebApi.Controllers
                     new
                     {
                         count = products.Count(),
-                        data = JsonConvert.SerializeObject(products.Skip((page - 1) * itemsPerPage).Take(itemsPerPage)) //TODO :: Move pagination to repository 
+                        data = allProducts ? 
+                                            JsonConvert.SerializeObject(products) :
+                                            JsonConvert.SerializeObject(products.Skip((page - 1) * itemsPerPage).Take(itemsPerPage)) //TODO :: Move pagination to repository 
                     });
 
                 return json.ToString();

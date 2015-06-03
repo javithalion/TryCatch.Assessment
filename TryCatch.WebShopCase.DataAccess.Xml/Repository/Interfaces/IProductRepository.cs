@@ -8,7 +8,7 @@ using TryCatch.WebShopCase.Infraestructure.Repository;
 
 namespace TryCatch.WebShopCase.DataAccess.Xml.Repository.Interfaces
 {
-    public interface IProductRepository : ICrudRepository<Product,int>
+    public interface IProductRepository : ICrudRepository<Product, int>
     {
     }
 }

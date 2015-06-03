@@ -16,30 +16,34 @@ namespace TryCatch.WebShopCase.Domain
         {
             this.OrderLines = new List<OrderLine>();
         }
-
         /// <summary>
         /// Gets or sets the order lines for this order
         /// </summary>
-        public IList<OrderLine> OrderLines { get; set; }
+        public virtual IList<OrderLine> OrderLines { get; set; }
+
+        // <summary>
+        /// Gets or sets the customer for this order
+        /// </summary>
+        public virtual Customer Customer { get; set; }
 
         /// <summary>
         /// Gets or sets the check out date for this order
         /// </summary>
-        public DateTime CheckoutDate { get; set; }
+        public virtual DateTime CheckoutDate { get; set; }
         
         /// <summary>
         /// Gets or sets the total price (Sub total + Vat) for this order
         /// </summary>
-        public double Total { get; set; }
+        public virtual double Total { get; set; }
 
         /// <summary>
         /// Gets or sets the sub total price for this order
         /// </summary>
-        public double SubTotal { get; set; }
+        public virtual double SubTotal { get; set; }
 
         /// <summary>
         /// Gets or sets the VAT price for this order
         /// </summary>
-        public double Vat { get; set; }
+        public virtual double Vat { get; set; }
     }
 }

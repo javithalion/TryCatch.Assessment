@@ -11,6 +11,6 @@ namespace TryCatch.WebShopCase.Domain.Base
         /// <summary>
         /// Gets or sets the identifier for this entity
         /// </summary>
-        public T Id { get; set; }
+        public virtual T Id { get; set; }
     }
 }

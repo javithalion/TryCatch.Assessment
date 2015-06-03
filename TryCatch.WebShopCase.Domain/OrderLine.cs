@@ -12,31 +12,31 @@ namespace TryCatch.WebShopCase.Domain
         /// <summary>
         /// Gets or sets the product for this order line
         /// </summary>
-        public Product Product { get; set; }
+        public virtual  Product Product { get; set; }
 
         /// <summary>
         /// Gets or sets the amount of products for this order line
         /// </summary>
-        public int Amount { get; set; }
+        public virtual int Amount { get; set; }
 
         /// <summary>
         /// Gets or sets the VAT percentage related with the product in the moment of the checkout (in order to avoid calc issues if the product change its VAT)
         /// </summary>
-        public double VatPercentageFromProduct { get; set; }
+        public virtual  double VatPercentageFromProduct { get; set; }
 
         /// <summary>
         /// Gets or sets the total price (Sub total + Vat) for this order line
         /// </summary>
-        public double Total { get; set; }
+        public virtual double Total { get; set; }
 
         /// <summary>
         /// Gets or sets the sub total price for this order line
         /// </summary>
-        public double SubTotal { get; set; }
+        public virtual double SubTotal { get; set; }
 
         /// <summary>
         /// Gets or sets the VAT price for this order line
         /// </summary>
-        public double Vat { get; set; }
+        public virtual double Vat { get; set; }
     }
 }

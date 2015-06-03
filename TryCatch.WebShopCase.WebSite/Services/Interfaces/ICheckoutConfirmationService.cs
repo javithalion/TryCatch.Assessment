@@ -11,6 +11,6 @@ namespace TryCatch.WebShopCase.WebSite.Services.Interfaces
     {
         CheckoutConfirmationModel GetEmptyCheckOutConfirmationModel();
 
-        void CheckOutAction(CheckoutConfirmationModel model);
+        Guid CheckOutAction(CheckoutConfirmationModel model);
     }
 }

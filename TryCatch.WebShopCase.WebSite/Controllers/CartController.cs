@@ -40,8 +40,8 @@ namespace TryCatch.WebShopCase.WebSite.Controllers
                 if (!ModelState.IsValid)
                     throw new HttpException("Provided checkout information was not valid");
 
-                _checkoutConfirmationService.CheckOutAction(model);
-                ViewData["Messages.Success"] = string.Format("Order was properly registered in our system with id {0}", Guid.NewGuid());
+                var orderIdentifier = _checkoutConfirmationService.CheckOutAction(model);
+                ViewData["Messages.Success"] = string.Format("Congratulations. Order was properly registered in our system with id {0}!", orderIdentifier);
                 return View("Confirmation");
             }
             catch

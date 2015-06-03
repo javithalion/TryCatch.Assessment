@@ -11,6 +11,6 @@ namespace TryCatch.WebShopCase.Domain.Base
         /// <summary>
         /// Gets or sets when this entyty was created
         /// </summary>
-        public DateTime CreationDate { get; set; }
+        public virtual DateTime CreationDate { get; set; }
     }
 }
