@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TryCatch.WebShopCase.WebSite.Common.Enums;
 using TryCatch.WebShopCase.WebSite.Models;
 using TryCatch.WebShopCase.WebSite.Services.Interfaces;
 
@@ -41,11 +42,13 @@ namespace TryCatch.WebShopCase.WebSite.Controllers
                     throw new HttpException("Provided checkout information was not valid");
 
                 var orderIdentifier = _checkoutConfirmationService.CheckOutAction(model);
-                ViewData["Messages.Success"] = string.Format("Congratulations. Order was properly registered in our system with id {0}!", orderIdentifier);
+
+                ViewData[MessageType.Success.ToString()] = string.Format("Congratulations. Order was properly registered in our system with id {0}!", orderIdentifier);
                 return View("Confirmation");
             }
-            catch
+            catch (Exception ex)
             {
+                ViewData[MessageType.Error.ToString()] = string.Format("There was an error during the checkout process. {0} ", ex.Message);
                 return View();
             }
         }

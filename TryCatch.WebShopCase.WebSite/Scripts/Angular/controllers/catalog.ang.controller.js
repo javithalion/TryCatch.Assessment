@@ -25,10 +25,9 @@
 
         //Refresh the current list of approvers
         $scope.refreshProductList = function () {
-            productService.getAll($scope.pagingInfo).then(function (response) {
-                var parsedResponse = JSON.parse(response)
-                $scope.products = JSON.parse(parsedResponse.data);
-                $scope.pagingInfo.totalItems = parsedResponse.count;
+            productService.getAll($scope.pagingInfo).then(function (response) {                
+                $scope.products = JSON.parse(response.data);
+                $scope.pagingInfo.totalItems = response.count;
             },
              function (err) {
                  $scope.errorMessage = err.statusMessage || err;

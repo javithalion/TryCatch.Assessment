@@ -41,8 +41,17 @@ namespace TryCatch.WebShopCase.WebSite.Services.Implementations
 
                 var response = client.Execute(request);
 
-                JObject parsedResponse = JObject.Parse(response.Content);
-                return new Guid((string)parsedResponse["OrderId"]);
+                if (response.StatusCode != System.Net.HttpStatusCode.OK &&
+                    response.StatusCode != System.Net.HttpStatusCode.Created &&
+                    response.StatusCode != System.Net.HttpStatusCode.NoContent)
+                {
+                    throw new Exception(string.Format("Request to API system failed. Status code = {0} ErrorMessage = {1}", response.StatusCode, response.ErrorMessage));
+                }
+                else
+                {
+                    JObject parsedResponse = JObject.Parse(response.Content);
+                    return new Guid((string)parsedResponse["OrderId"]);
+                }
             }
             catch (Exception ex)
             {

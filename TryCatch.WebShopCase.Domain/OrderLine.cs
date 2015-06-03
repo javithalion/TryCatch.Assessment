@@ -15,6 +15,11 @@ namespace TryCatch.WebShopCase.Domain
         public virtual  Product Product { get; set; }
 
         /// <summary>
+        /// Gets or sets the product id for this order line
+        /// </summary>
+        public virtual int ProductId { get; set; }
+
+        /// <summary>
         /// Gets or sets the amount of products for this order line
         /// </summary>
         public virtual int Amount { get; set; }

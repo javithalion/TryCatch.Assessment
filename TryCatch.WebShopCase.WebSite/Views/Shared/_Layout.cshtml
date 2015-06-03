@@ -33,32 +33,45 @@
             </div><!--/.nav-collapse -->
         </div>
     </nav>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <div class="container">
-            <h1>This is the TryCatch shop!</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in molestie orci.
-                Cras gravida scelerisque urna non bibendum. Duis eget lobortis arcu. Praesent fringilla ullamcorper
-                arcu, et fringilla arcu accumsan faucibus. Cras quis tellus augue. Pellentesque habitant morbi
-                tristique senectus et netus et malesuada fames ac turpis egestas.
-            </p>
-        </div>
-    </div>
-
-
-
-
     <div class="container" ng-app="demoShop">
-        @RenderSection("featured", required: false)
+        <div class="row">
+            <div class="container" ng-app="demoShop">
+                @if (ViewData[TryCatch.WebShopCase.WebSite.Common.Enums.MessageType.Success.ToString()] != null)
+                {
+                    <div class="row">
+                        <div class="alert alert-success" role="alert">
+                            <p>@ViewData[TryCatch.WebShopCase.WebSite.Common.Enums.MessageType.Success.ToString()].ToString()</p>
+                        </div>
+                    </div>
+                }
+                @if (ViewData[TryCatch.WebShopCase.WebSite.Common.Enums.MessageType.Warning.ToString()] != null)
+                {
+                    <div class="row">
+                        <div class="alert alert-warning" role="alert">
+                            <p>@ViewData[TryCatch.WebShopCase.WebSite.Common.Enums.MessageType.Warning.ToString()].ToString()</p>
+                        </div>
+                    </div>
+                }
+                @if (ViewData[TryCatch.WebShopCase.WebSite.Common.Enums.MessageType.Error.ToString()] != null)
+                {
+                    <div class="row">
+                        <div class="alert alert-danger" role="alert">
+                            <p>@ViewData[TryCatch.WebShopCase.WebSite.Common.Enums.MessageType.Error.ToString()].ToString()</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <br />
+        <div class=" row">
+            @RenderSection("featured", required: false)
 
-        @RenderBody()
-
+            @RenderBody()
+        </div>
         <footer class="text-center">
             <p>&copy; @DateTime.Now.Year - Javier Cervera Cano Shop demo</p>
         </footer>
-    </div> <!-- /container -->    
+    </div> <!-- /container -->
     @Scripts.Render("~/bundles/mainAngularApp")
     @RenderSection("scripts", required: false)
 </body>

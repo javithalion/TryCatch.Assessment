@@ -20,8 +20,8 @@ namespace TryCatch.WebShopCase.DataAccess.NHibernate.Maps
             Map(o => o.Total).Not.Nullable();
             Map(o => o.Vat).Not.Nullable();
 
-            References(o => o.Customer).Class(typeof(Customer)).Column("CustomerId").Not.LazyLoad().Fetch.Join().Cascade.SaveUpdate();
-            HasMany(o => o.OrderLines).KeyColumn("OrderId").Not.LazyLoad().Fetch.Subselect().Inverse().Cascade.AllDeleteOrphan();
+            References(o => o.Customer).Class(typeof(Customer)).Column("CustomerId").Not.LazyLoad().Fetch.Join().Cascade.SaveUpdate().Not.Nullable();
+            HasMany(o => o.OrderLines).KeyColumn("OrderId").Cascade.AllDeleteOrphan();
         }
     }
 }

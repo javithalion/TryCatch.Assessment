@@ -8,14 +8,7 @@ using TryCatch.WebShopCase.Domain.Base;
 namespace TryCatch.WebShopCase.Domain
 {
     public class Order : TrackedEntity<Guid>
-    {
-        /// <summary>
-        /// Creates a new instance of the class Order
-        /// </summary>
-        public Order()
-        {
-            this.OrderLines = new List<OrderLine>();
-        }
+    {       
         /// <summary>
         /// Gets or sets the order lines for this order
         /// </summary>

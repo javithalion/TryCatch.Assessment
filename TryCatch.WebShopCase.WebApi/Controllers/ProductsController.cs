@@ -21,84 +21,92 @@ namespace TryCatch.WebShopCase.WebApi.Controllers
         }
 
         // GET api/products
-        public string Get(int page = 1, int itemsPerPage = 10, bool allProducts = false)
+        public HttpResponseMessage Get(int page = 1, int itemsPerPage = 10, bool allProducts = false)
         {
             try
             {
-                var products = _productService.FindAll(); 
+                var products = _productService.FindAll();
                 var serializer = new Newtonsoft.Json.JsonSerializer();
-                var json = JObject.FromObject(
+                var json = 
                     new
                     {
                         count = products.Count(),
-                        data = allProducts ? 
+                        data = allProducts ?
                                             JsonConvert.SerializeObject(products) :
                                             JsonConvert.SerializeObject(products.Skip((page - 1) * itemsPerPage).Take(itemsPerPage)) //TODO :: Move pagination to repository 
-                    });
+                    };
 
-                return json.ToString();
+                return Request.CreateResponse(HttpStatusCode.OK, json);
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                //TODO :: Log  
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 
         // GET api/products/5
-        public string Get(int id)
+        public HttpResponseMessage Get(int id)
         {
             try
             {
                 var product = _productService.Get(id);
-                return JsonConvert.SerializeObject(product);
+                if (product == null)
+                    return Request.CreateErrorResponse(HttpStatusCode.NotFound, string.Format("Doesn't exist a product with id {0}", id));
+                else
+                    return Request.CreateResponse<Product>(HttpStatusCode.OK, product);                
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                //TODO :: Log  
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 
         // POST api/products
-        public string Post([FromBody]string value)
+        public HttpResponseMessage Post([FromBody]string value)
         {
             try
             {
                 var product = JsonConvert.DeserializeObject<Product>(value);
                 var result = _productService.Insert(product);
-                return JsonConvert.SerializeObject(product);
+                return Request.CreateResponse<Product>(HttpStatusCode.OK, result);
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                //TODO :: Log  
+                return Request.CreateErrorResponse(HttpStatusCode.Created, ex.Message);
             }
         }
 
         // PUT api/products/5
-        public string Put([FromBody]string value)
+        public HttpResponseMessage Put([FromBody]string value)
         {
             try
             {
                 var product = JsonConvert.DeserializeObject<Product>(value);
                 _productService.Update(product);
-                return JsonConvert.SerializeObject(product);
+                return Request.CreateResponse<Product>(HttpStatusCode.OK, product);
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                //TODO :: Log  
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 
         // DELETE api/products/5
-        public string Delete(int id)
+        public HttpResponseMessage Delete(int id)
         {
             try
             {
                 _productService.Delete(id);
-                return string.Empty;
+                return Request.CreateResponse(HttpStatusCode.NoContent);
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                //TODO :: Log  
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
     }

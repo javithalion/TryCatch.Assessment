@@ -20,7 +20,7 @@ namespace TryCatch.WebShopCase.DataAccess.NHibernate.Maps
             Map(ol => ol.Total).Not.Nullable();
             Map(ol => ol.Vat).Not.Nullable();
             Map(ol => ol.VatPercentageFromProduct).Not.Nullable().Not.Update();
-            Map(ol => ol.Product.Id).Column("ProductId").Not.Nullable();            
+            Map(ol => ol.ProductId).Column("ProductId").Not.Nullable();            
         }
     }
 }

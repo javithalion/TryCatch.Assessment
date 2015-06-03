@@ -193,6 +193,7 @@
     <Compile Include="App_Start\CastleWindsorInstaller.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Common\Enums\MessageType.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -202,6 +203,11 @@
     <Compile Include="Models\CustomerTitle.cs" />
     <Compile Include="Models\OrderLine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Services\Implementations\CheckoutConfirmationService.cs" />
     <Compile Include="Services\Interfaces\ICheckoutConfirmationService.cs" />
   </ItemGroup>
@@ -1126,7 +1132,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\version.json" />
     <Content Include="Views\Cart\Index.cshtml" />
-    <Content Include="Views\Shared\_LayoutNoJumb.cshtml" />
     <Content Include="Views\Cart\Checkout.cshtml" />
     <Content Include="Views\Cart\Confirmation.cshtml" />
   </ItemGroup>
@@ -1136,6 +1141,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
